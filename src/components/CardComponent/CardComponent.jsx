@@ -1,26 +1,27 @@
 import { StarFilled } from '@ant-design/icons';
-import { Card } from 'antd';
 import React from 'react';
-import { WrapperPriceText, WrapperReportText } from '../../pages/HomePage/style';
+import { WrapperCardStyle, WrapperDiscountText, WrapperPriceText, WrapperReportText } from '../../pages/HomePage/style';
 import { StyleNameProduct } from './style';
 
 const CardComponent = () => {
   return (
-    <Card
+    <WrapperCardStyle
       hoverable
-      style={{
-        width: 240,
-      }}
-      bodyStyle={{padding: '10px'}}
+      bodyStyle={{ padding: '10px' }}
       cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
     >
       <StyleNameProduct>Iphone</StyleNameProduct>
       <WrapperReportText>
-        <span>4.5</span> <StarFilled style={{fontSize: '10px', color: 'yellow'}}/>
+        <span style={{marginRight: '4px'}}>
+          <span>4.5</span> <StarFilled style={{ fontSize: '12px', color: 'yellow' }} />
+        </span>
         <span> | Da ban 1000+</span>
-        <WrapperPriceText>1.000.000d</WrapperPriceText>
       </WrapperReportText>
-    </Card>
+      <WrapperPriceText>
+        1.000.000d
+        <WrapperDiscountText>-4%</WrapperDiscountText>
+      </WrapperPriceText>
+    </WrapperCardStyle>
   )
 }
 
