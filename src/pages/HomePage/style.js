@@ -36,3 +36,11 @@ export const WrapperDiscountText = styled.span`
   font-size: 12px;
   font-weight: 500;
 `
+
+export const WrapperProducts = styled.div`
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+`
